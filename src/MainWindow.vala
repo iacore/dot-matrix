@@ -75,8 +75,7 @@ namespace DotMatrix {
         public MainWindow (Adw.Application application) {
             GLib.Object (
                 application: application,
-                app: application,
-                icon_name: Config.APP_ID
+                app: application
             );
 
             var evconkey = new Gtk.ShortcutController ();
@@ -219,11 +218,9 @@ namespace DotMatrix {
                 null
             };
 
-            var program_name = "Dot Matrix" + Config.NAME_SUFFIX;
+            var program_name = "Dot Matrix";
             Gtk.show_about_dialog (this,
                                    "program-name", program_name,
-                                   "logo-icon-name", Config.APP_ID,
-                                   "version", Config.VERSION,
                                    "comments", _("The glyph playground of creativity from simple lines."),
                                    "copyright", COPYRIGHT,
                                    "authors", AUTHORS,

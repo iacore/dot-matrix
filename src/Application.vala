@@ -23,12 +23,9 @@ public class DotMatrix.Application : Adw.Application {
     };
 
     public Application () {
-        Object (application_id: Config.APP_ID);
+        Object ();
     }
     public static int main (string[] args) {
-        Intl.bindtextdomain (Config.GETTEXT_PACKAGE, Config.LOCALEDIR);
-        Intl.textdomain (Config.GETTEXT_PACKAGE);
-
         var app = new DotMatrix.Application ();
         return app.run (args);
     }
